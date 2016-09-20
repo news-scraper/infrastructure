@@ -9,4 +9,4 @@ EOF
 
 exec $SHELL
 
-chruby ruby-2.3.0
+chruby ruby-2.3.1

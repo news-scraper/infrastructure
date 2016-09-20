@@ -11,7 +11,7 @@ cd ruby-install-0.6.0/
 sudo make install
 
 # Install Ruby 2.3.0
-ruby-install --latest ruby 2.3.0
+ruby-install --latest ruby 2.3.1
 
 # Chruby
 wget -O chruby-0.3.9.tar.gz https://github.com/postmodern/chruby/archive/v0.3.9.tar.gz
