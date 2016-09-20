@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+
+require 'json'
+
+github_users = %w(jules2689 richardwu)
+ejson = JSON.parse(`ejson decrypt credentials.ejson`)
+env = {
+  'AWS_ACCESS_KEY_ID' => ejson['aws_id'],
+  'AWS_SECRET_ACCESS_KEY' => ejson['aws_secret'],
+  'GITHUB_USERS' => github_users.join(',')
+}
+system(env, 'cd servers && packer build rails.json')
