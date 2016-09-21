@@ -23,7 +23,10 @@
     {
       "type": "shell",
       "execute_command": "chmod +x {{ .Path }}; time sudo {{ .Vars }} {{ .Path }}",
-      "scripts": ["scripts/shared/create_deploy_user.sh"]
+      "scripts": [
+        "scripts/shared/create_deploy_user.sh",
+        "scripts/shared/sysctl.sh"
+      ]
     },
     {
       "execute_command": "chmod +x {{ .Path }}; time sudo -S -u deploy -i /bin/bash -l -c '{{ .Vars }} {{ .Path }}'",
@@ -35,7 +38,7 @@
         "scripts/rails/gems.sh",
         "scripts/shared/javascript.sh",
         "scripts/shared/nginx.sh",
-        "scripts/shared/sysctl.sh"
+        
       ],
       "environment_vars": [
         "GITHUB_USERS={{user `github_users`}}"
