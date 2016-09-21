@@ -34,7 +34,8 @@
         "scripts/shared/ruby.sh",
         "scripts/rails/gems.sh",
         "scripts/shared/javascript.sh",
-        "scripts/shared/nginx.sh"
+        "scripts/shared/nginx.sh",
+        "scripts/shared/sysctl.sh"
       ],
       "environment_vars": [
         "GITHUB_USERS={{user `github_users`}}"
