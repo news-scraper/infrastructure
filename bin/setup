@@ -1,7 +1,5 @@
 #!/bin/bash
 
-set -e
-
 function install_darwin() {
   # make sure homebrew is installed
   which -s brew
